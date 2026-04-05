@@ -37,6 +37,8 @@ public class BallController : MonoBehaviour
     private float groundedSlowTimer = 0f;
 
     private bool hasHiddenStartOverlay = false;
+    private int strokeCount = 0;
+    private bool levelEnded = false;
 
     private void Awake()
     {
@@ -131,6 +133,9 @@ public class BallController : MonoBehaviour
 
     private void ShootBall()
     {
+        if (levelEnded)
+            return;
+
         Vector2 dragVector = dragCurrentMouseWorld - dragStartMouseWorld;
         dragVector = Vector2.ClampMagnitude(dragVector, maxDragDistance);
 
@@ -144,6 +149,8 @@ public class BallController : MonoBehaviour
         groundedSlowTimer = 0f;
 
         rb.AddForce(force, ForceMode2D.Impulse);
+
+        strokeCount++;
 
         if (!hasHiddenStartOverlay)
         {
@@ -194,5 +201,17 @@ public class BallController : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
+    }
+
+    public int GetStrokeCount()
+    {
+        return strokeCount;
+    }
+
+    public void EndLevel()
+    {
+        levelEnded = true;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
     }
 }
