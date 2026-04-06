@@ -2923,11 +2923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7275040894984057060, guid: 8a9fde19e270f324ba04efe0d71044a3, type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7275040894984057060, guid: 8a9fde19e270f324ba04efe0d71044a3, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1365707853
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7275040894984057060, guid: 8a9fde19e270f324ba04efe0d71044a3, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -4270,7 +4270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &599032240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5852,11 +5852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7275040894984057060, guid: 8a9fde19e270f324ba04efe0d71044a3, type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7275040894984057060, guid: 8a9fde19e270f324ba04efe0d71044a3, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1365707853
+      value: 287790889
       objectReference: {fileID: 0}
     - target: {fileID: 7275040894984057060, guid: 8a9fde19e270f324ba04efe0d71044a3, type: 3}
       propertyPath: m_WasSpriteAssigned
